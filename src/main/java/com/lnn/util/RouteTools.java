@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Component
@@ -75,7 +76,11 @@ public class RouteTools {
         // 检查菜单列表是否为空
         if (CollUtil.isNotEmpty(menuList)){
             //遍历菜单，将菜单转换为路由对象，添加到子路由列表
-            menuList.stream().map(menu -> children.add(route(menu)));
+            for (Menu menu : menuList) {
+                RouteVO child = route(menu);
+                children.add(child);
+            }
+
         }
         return children;
 
