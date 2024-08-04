@@ -66,7 +66,7 @@
         <result column="email" jdbcType="VARCHAR" property="email" />
         <result column="enabled" jdbcType="BOOLEAN" property="enabled" />
 
-        <association property="dept" column="id" javaType="com.lnn.entity.Dept" select="com.lnn.mapper.DeptMapper.getDeptByUserId" />
+        <association property="dept" column="id" javaType="com.lnn.entity.Dept" select="com.lnn.com.lnn.mapper.DeptMapper.getDeptByUserId" />
 
         <collection property="roles" column="id" ofType="com.lnn.entity.Role" select="com.lnn.mapper.RoleMapper.getRolesByUserId" />
 
