@@ -1,12 +1,10 @@
 package com.lnn.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lnn.entity.Role;
 import com.lnn.mapper.UserMapper;
-import com.lnn.service.userService;
+import com.lnn.service.UserService;
 import com.lnn.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -17,7 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.stream.Collectors;
 
 @Service
-public class userServiceImpl extends ServiceImpl<UserMapper, User> implements userService {
+public class userServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
     @Autowired
     private UserMapper userMapper;
