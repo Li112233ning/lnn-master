@@ -86,13 +86,13 @@
         where username = #{username,jdbcType=VARCHAR} and u.deleteStatus = 1
     </select>
 
-<!--    <select id="listPage" resultMap="BaseResultMap">-->
-<!--        select-->
-<!--            u.id as uid,u.deleteStatus as udeleteStatus,u.createTime as ucreateTime,u.updateTime as uupdateTime,u.username as uusername,u.nickname as unickname,u.password as upassword,u.sex as usex,u.mobile as umobile,u.enabled as uenabled,u.email as uemail,u.dept_id as udeptId,-->
-<!--            d.id as did,d.deleteStatus as ddeleteStatus,d.createTime as dcreateTime,d.updateTime as dupdateTime,d.dept_name as ddept_name,d.order_num as dorder_num,d.manager as dmanager,d.phone as dphone,d.email as demail,d.status as dstatus,d.create_by as create_by,d.update_by as dupdate_by,d.parent_id as dparent_id-->
-<!--        from redpig_sys_user u-->
-<!--            left join redpig_sys_dept d on d.id = u.dept_id-->
-<!--        ${ew.customSqlSegment}-->
-<!--    </select>-->
+    <select id="listPage" resultMap="BaseResultMap">
+        select
+            u.id as uid,u.deleteStatus as udeleteStatus,u.createTime as ucreateTime,u.updateTime as uupdateTime,u.username as uusername,u.nickname as unickname,u.password as upassword,u.sex as usex,u.mobile as umobile,u.enabled as uenabled,u.email as uemail,u.dept_id as udeptId,
+            d.id as did,d.deleteStatus as ddeleteStatus,d.createTime as dcreateTime,d.updateTime as dupdateTime,d.dept_name as ddept_name,d.order_num as dorder_num,d.manager as dmanager,d.phone as dphone,d.email as demail,d.status as dstatus,d.create_by as create_by,d.update_by as dupdate_by,d.parent_id as dparent_id
+        from redpig_sys_user u
+            left join redpig_sys_dept d on d.id = u.dept_id
+        ${ew.customSqlSegment}
+    </select>
 
 </mapper>

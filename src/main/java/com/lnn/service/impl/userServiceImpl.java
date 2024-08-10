@@ -1,5 +1,7 @@
 package com.lnn.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Assert;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.lnn.entity.Role;
@@ -42,10 +44,10 @@ public class userServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
 
-//    @Override
-//    public IPage<User> listPage(IPage<User> page, Wrapper<User> queryWrapper) {
-//        return null;
-//    }
+    @Override
+    public IPage<User> listPage(IPage<User> page, Wrapper<User> queryWrapper) {
+        return null;
+    }
 
 
 }
